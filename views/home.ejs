@@ -1,0 +1,11 @@
+<%- include("./partials/header") -%>
+
+<h1><%= ejshome %></h1>
+<p><%= home2 %></p>
+
+    <% newposts.forEach(function (post) { %>
+        <h1><%= post.inputbox %></h1>
+        <p><%= post.textbox.substring(0, 100) + "..."  %><a href="/posts/<%= post.inputbox %>">Read More</a></p>
+     <% }) %>
+
+<%- include("./partials/footer") -%>
